@@ -1,0 +1,58 @@
+:root {
+    --primary: #059669;
+    --primary-hover: #047857;
+    --primary-light: #d1fae5;
+    --navy: #064e3b;
+    --text: #1f2937;
+    --muted: #4b5563;
+    --border: #d1d5db;
+    --background: #ffffff;
+    --background-soft: #f9fafb;
+    --danger: #dc2626;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: var(--background-soft);
+    color: var(--text);
+}
+.form-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.form-section { width: 100%; padding: 20px; }
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--background);
+    padding: 35px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+.form-header { margin-bottom: 24px; }
+.eyebrow { color: var(--primary); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; }
+.form-header h1 { margin: 6px 0 0; color: var(--navy); font-size: 1.8rem; }
+.form-header p { margin: 6px 0 0; color: var(--muted); }
+.contact-form { display: grid; gap: 16px; }
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.form-field { display: grid; gap: 6px; }
+.form-field label { color: var(--navy); font-size: 0.9rem; font-weight: 600; }
+.form-field input, .form-field textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font: inherit;
+    outline: none;
+}
+.form-field input:focus, .form-field textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-light); }
+.form-field textarea { resize: vertical; }
+.required-mark { color: var(--danger); }
+.form-actions { margin-top: 10px; }
+.button { width: 100%; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); font-weight: 700; cursor: pointer; border: none; background: var(--primary); color: #ffffff; }
+.button:hover { background: var(--primary-hover); }
+@media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }

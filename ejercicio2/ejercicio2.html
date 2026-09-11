@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reserva</title>
+    <link rel="stylesheet" href="eje2.css">
+</head>
+<body>
+    <main class="form-page">
+        <section class="form-section">
+            <div class="form-container">
+                <header class="form-header">
+                    <span class="eyebrow">RESERVAS</span>
+                    <h1>Reserva tu espacio</h1>
+                    <p>Selecciona la fecha, hora y detalles de tu asistencia.</p>
+                </header>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="fecha">Fecha preferida <span class="required-mark">*</span></label>
+                            <input type="date" id="fecha" name="fecha" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="hora">Hora preferida <span class="required-mark">*</span></label>
+                            <input type="time" id="hora" name="hora" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="personas">Número de personas <span class="required-mark">*</span></label>
+                        <input type="number" id="personas" name="personas" min="1" max="20" value="1" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="comentarios">Comentarios adicionales</label>
+                        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Requerimientos especiales..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="button button-primary">Confirmar Reserva</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
