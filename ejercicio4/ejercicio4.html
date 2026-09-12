@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud Laboral</title>
+    <link rel="stylesheet" href="eje4.css">
+</head>
+<body>
+    <main class="form-page">
+        <section class="form-section">
+            <div class="form-container">
+                <header class="form-header">
+                    <span class="eyebrow">EMPLEO</span>
+                    <h1>Únete a nuestro equipo</h1>
+                    <p>Envía tus datos y adjunta tu hoja de vida para postularte.</p>
+                </header>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-field">
+                        <label for="nombre">Nombre completo <span class="required-mark">*</span></label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Correo electrónico <span class="required-mark">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="cv">Adjuntar CV (PDF o Word) <span class="required-mark">*</span></label>
+                        <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx" required>
+                        <small class="field-help">Tamaño máximo recomendado: 5MB.</small>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="button button-primary">Enviar Solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
