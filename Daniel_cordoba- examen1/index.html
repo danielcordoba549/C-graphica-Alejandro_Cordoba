@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaludVida Hospital - Página Principal</title>
+    <link rel="stylesheet" href="styless.css">
+    <!-- Iconos de Bootstrap (necesarios para los iconos de redes y elementos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- Menú de navegación fijo superior -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="brand-container">
+                <i class="bi bi-plus-square-fill logo-icon"></i>
+                <div class="brand-text">
+                    <img src="./icons/logo-saludvida-header.png" alt="Logo Tecnicell" style="max-height: 50px;">
+
+                </div>
+            </div>
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="#noticias">Noticias</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <div class="header-search">
+                <i class="bi bi-search"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <!-- 1. Sección Hero / Portada con fondo de hospital -->
+        <section class="hero-section"
+            style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./icons/hospital\ \(2\).png') center/cover no-repeat;">
+
+            <!-- Aquí adentro va el contenido que ya tienes (el h1, el texto y el botón) -->
+            <div class="container hero-text-content">
+                <h1>Cuidamos lo más importante:<br>tu salud</h1>
+                <p>Atención médica integral con un equipo humano comprometido y tecnología de vanguardia.</p>
+                <a href="#servicios" class="btn-hero">Conoce nuestros servicios</a>
+            </div>
+
+        </section>
+
+        <!-- 2. Tarjetas de Características Superiores -->
+        <section class="features-bar">
+            <div class="container features-grid">
+                <div class="feature-card">
+                    <i class="bi bi-heart-pulse"></i>
+                    <h3>Atención integral</h3>
+                    <p>para toda la familia</p>
+                </div>
+                <div class="feature-card">
+                    <i class="bi bi-award"></i>
+                    <h3>Especialistas</h3>
+                    <p>altamente capacitados</p>
+                </div>
+                <div class="feature-card">
+                    <i class="bi bi-cpu"></i>
+                    <h3>Tecnología</h3>
+                    <p>médica avanzada</p>
+                </div>
+                <div class="feature-card">
+                    <i class="bi bi-people"></i>
+                    <h3>Compromiso</h3>
+                    <p>con la comunidad</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Sección de Noticias Destacadas -->
+        <section id="noticias" class="section-block">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Noticias destacadas</h2>
+                    <a href="#" class="view-all">Ver todas →</a>
+                </div>
+                <div class="cards-grid">
+                    <!-- Noticia 1 -->
+                    <article class="content-card">
+                        <div class="card-img-wrapper">
+                            <img src="./icons/hospital.png" alt="UCI">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-badge">INSTITUCIONAL</span>
+                            <h3>Inauguramos la nueva Unidad de Cuidados Intensivos</h3>
+                            <p>Ampliamos nuestra capacidad de atención con tecnología de última generación.</p>
+                            <div class="card-footer-info">
+                                <span class="card-date">10 abr. 2026</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Noticia 2 -->
+                    <article class="content-card">
+                        <div class="card-img-wrapper">
+                            <img src="./icons/doc-ni.png" alt="revicion">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-badge">SALUD</span>
+                            <h3>Campaña de vacunación infantil en nuestra ciudad</h3>
+                            <p>Jornadas gratuitas de vacunación para niños y niñas de 0 a 5 años.</p>
+                            <div class="card-footer-info">
+                                <span class="card-date">8 abr. 2026</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Noticia 3 -->
+                    <article class="content-card">
+                        <div class="card-img-wrapper">
+                            <img src="./icons/yoga.jpg" alt="Bienestar">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-badge">COMUNIDAD</span>
+                            <h3>Jornada de bienestar para nuestros colaboradores</h3>
+                            <p>Más de 200 empleados participaron en actividades de salud física y mental.</p>
+                            <div class="card-footer-info">
+                                <span class="card-date">5 abr. 2026</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Sección de Nuestros Servicios -->
+        <section id="servicios" class="section-block">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Nuestros servicios</h2>
+                    <a href="#" class="view-all">Ver todos →</a>
+                </div>
+                <div class="services-grid-exact">
+                    <div class="service-box">
+                        <i class="bi bi-bandaid"></i>
+                        <h3>Consulta externa</h3>
+                        <p>Atención médica especializada para todas las edades.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="bi bi-hospital"></i>
+                        <h3>Urgencias</h3>
+                        <p>Atención 24/7 para situaciones críticas.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="bi bi-house-door"></i>
+                        <h3>Hospitalización</h3>
+                        <p>Habitaciones seguras y confortables.</p>
+                    </div>
+                    <div class="service-box">
+                        <i class="bi bi-shield-plus"></i>
+                        <h3>Programas de salud</h3>
+                        <p>Prevención y bienestar para la comunidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="nosotros"></div>
+    </main>
+
+    <!-- 5. Footer Institucional Oscuro -->
+    <footer class="footer-dark">
+        <div class="container footer-grid-exact">
+            <div class="footer-col-brand">
+                <div class="brand-container footer-brand-flex">
+                    <i class="bi bi-plus-square-fill logo-icon white-logo"></i>
+                    <div class="brand-text">
+                        <img src="./icons/logo-saludvida-footer.png" alt="Logo Tecnicell" style="max-height: 50px;">
+
+                    </div>
+                </div>
+                <p class="footer-mission">Trabajamos cada día por una mejor calidad de vida, promoviendo la salud y el
+                    bienestar de nuestra comunidad.</p>
+            </div>
+
+            <div class="footer-col-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#noticias">Noticias</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col-links">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#servicios">Consulta externa</a></li>
+                    <li><a href="#servicios">Urgencias</a></li>
+                    <li><a href="#servicios">Hospitalización</a></li>
+                    <li><a href="#servicios">Programas de salud</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons-row">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom-row">
+            <p>&copy; 2026 Hospital SaludVida. Todos los derechos reservados.</p>
+            <div class="footer-legal-links">
+                <a href="#">Política de privacidad</a>
+                <span>|</span>
+                <a href="#">Términos de uso</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

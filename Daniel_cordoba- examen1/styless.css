@@ -1,0 +1,777 @@
+/* ==========================================
+   1. ESTILOS GENERALES Y RESETEO
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Tahoma', sans-serif;
+    color: #333333;
+    background-color: #f8fafc;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Verdana', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   2. BARRA SUPERIOR (CONTACTO)
+   ========================================== */
+.top-bar {
+    background-color: #0b1f36;
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 8px 0;
+}
+
+.top-bar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-info span {
+    margin-right: 20px;
+}
+
+.top-bar-info i {
+    color: #007bff;
+    margin-right: 5px;
+}
+
+.top-bar-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.top-bar-links a:hover {
+    color: #007bff;
+}
+
+.top-bar-links span {
+    color: #475569;
+}
+
+/* ==========================================
+   3. MENÚ DE NAVEGACIÓN
+   ========================================== */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    color: #007bff;
+    font-size: 28px;
+}
+
+.logo-icon.white-logo {
+    color: #ffffff;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-title {
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    font-size: 1.15rem;
+    color: #0b1f36;
+}
+
+.brand-title.white-text {
+    color: #ffffff;
+}
+
+.brand-subtitle {
+    font-family: 'Verdana', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: #555555;
+}
+
+.brand-subtitle.gray-text {
+    color: #aaaaaa;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+.nav a:hover, .nav a.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.header-search {
+    font-size: 1.2rem;
+    color: #333333;
+    cursor: pointer;
+}
+
+/* ==========================================
+   4. SECCIÓN HERO - INICIO (INDEX)
+   ========================================== */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('./icons/portada-hospital.png') center/cover no-repeat;
+    color: #ffffff;
+    padding: 90px 20px;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text-content h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-text-content p {
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+    max-width: 550px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.btn-hero:hover {
+    background-color: #0056b3;
+}
+
+/* ==========================================
+   5. TARJETAS SUPERIORES - INICIO (INDEX)
+   ========================================== */
+.features-bar {
+    margin-top: -35px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #edf2f7;
+}
+
+.feature-card i {
+    font-size: 32px;
+    color: #007bff;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.feature-card h3 {
+    font-size: 1.05rem;
+    color: #1a202c;
+    margin-bottom: 4px;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* ==========================================
+   6. SECCIONES NOTICIAS Y SERVICIOS - INICIO
+   ========================================== */
+.section-block {
+    margin-bottom: 60px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 1.7rem;
+    color: #1a202c;
+}
+
+.view-all {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.content-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    border: 1px solid #edf2f7;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #007bff;
+    background: #e7f1ff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.card-body h3 {
+    font-size: 1.1rem;
+    color: #1a202c;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-footer-info {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 12px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.services-grid-exact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.service-box {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    border: 1px solid #edf2f7;
+}
+
+.service-box i {
+    font-size: 32px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   7. PÁGINA DE CONTACTO (CONTACTO.HTML)
+   ========================================== */
+
+/* Banner de Contacto */
+.contact-hero {
+    background-color: #eef4fc;
+    padding-top: 40px;
+    overflow: hidden;
+}
+
+.contact-hero-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-hero-text {
+    flex: 1;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+
+.contact-hero-text h1 {
+    font-size: 2.8rem;
+    color: #0b1f36;
+    margin-bottom: 15px;
+}
+
+.contact-hero-text p {
+    font-size: 1.1rem;
+    color: #475569;
+}
+
+.contact-hero-img {
+    flex: 1;
+    text-align: right;
+    margin-bottom: -5px; /* Para asentar la imagen en el borde inferior */
+}
+
+.contact-hero-img img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+    box-shadow: -10px 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Layout del Formulario e Información */
+.contact-form-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.contact-layout-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+/* Estilos del Formulario Avanzado */
+.form-container-box h2 {
+    font-size: 1.6rem;
+    color: #0b1f36;
+    margin-bottom: 5px;
+}
+
+.form-sub-instruction {
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.form-group-exact {
+    margin-bottom: 20px;
+}
+
+.form-row-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group-exact label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #1e293b;
+    font-size: 0.9rem;
+}
+
+.required {
+    color: #e11d48;
+}
+
+.form-group-exact input[type="text"],
+.form-group-exact input[type="email"],
+.form-group-exact input[type="tel"],
+.form-group-exact select,
+.form-group-exact textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: #ffffff;
+}
+
+.form-group-exact input:focus,
+.form-group-exact select:focus,
+.form-group-exact textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.radio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.radio-label {
+    font-size: 0.9rem;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal !important;
+}
+
+.form-group-checkbox {
+    margin: 25px 0;
+}
+
+.checkbox-label {
+    font-size: 0.9rem;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-label span {
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-submit-exact {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+    width: 100%;
+    max-width: 250px;
+}
+
+.btn-submit-exact:hover {
+    background-color: #0056b3;
+}
+
+/* Barra Lateral de Información (Sidebar) */
+.sidebar-info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar-card {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.sidebar-card h3 {
+    font-size: 1.15rem;
+    color: #0b1f36;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+.info-item-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon-blue {
+    color: #007bff;
+    font-size: 1.3rem;
+    margin-top: 2px;
+}
+
+.info-title {
+    font-weight: bold;
+    color: #1e293b;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.95rem;
+}
+
+.info-item-row p {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Mapa de Ubicación */
+.map-placeholder {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #cbd5e1;
+    background-color: #e2e8f0;
+    height: 180px;
+}
+
+.map-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.map-pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e11d48;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Redes Sociales Coloreadas */
+.dark-social {
+    display: flex;
+    gap: 15px;
+}
+
+.dark-social a {
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.dark-social a:hover {
+    transform: scale(1.1);
+}
+
+.dark-social a i.bi-facebook { color: #1877f2; }
+.dark-social a i.bi-instagram { color: #e4405f; }
+.dark-social a i.bi-linkedin { color: #0a66c2; }
+.dark-social a i.bi-youtube { color: #ff0000; }
+
+/* ==========================================
+   8. FOOTER INSTITUCIONAL OSCURO
+   ========================================== */
+.footer-dark {
+    background-color: #0b1f36;
+    color: #ffffff;
+    padding: 60px 0 20px 0;
+}
+
+.footer-grid-exact {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand-flex {
+    margin-bottom: 15px;
+}
+
+.footer-mission {
+    font-size: 0.88rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+.footer-col-links h4, .footer-col-social h4 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col-links ul {
+    list-style: none;
+}
+
+.footer-col-links ul li {
+    margin-bottom: 12px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.footer-col-links ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col-links ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-col-links ul li i {
+    margin-right: 8px;
+}
+
+.social-icons-row {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons-row a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: #1e3a5f;
+    color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.social-icons-row a:hover {
+    background-color: #007bff;
+}
+
+.footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-legal-links a {
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================
+   9. DISEÑO RESPONSIVO (PANTALLAS PEQUEÑAS)
+   ========================================== */
+@media (max-width: 900px) {
+    .footer-grid-exact {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-layout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar-info span {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .contact-hero-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-hero-text {
+        padding-right: 0;
+    }
+    
+    .form-row-double {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid-exact {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom-row {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero-text-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav {
+        display: none;
+    }
+    
+    .radio-grid {
+        grid-template-columns: 1fr;
+    }
+}
